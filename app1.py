@@ -70,13 +70,13 @@ def europeanToSinhala(europeanNumber):
     sinhalaNumber = "".join(mapping[char] if char in mapping else char for char in europeanNumber)
     return sinhalaNumber
 
-def europeanToManipuri(europeanNumber):
-    mapping = {
-        '0': '꯰', '1': '꯱', '2': '꯲', '3': '꯳', '4': '꯴',
-        '5': '꯵', '6': '꯶', '7': '꯷', '8': '꯸', '9': '꯹'
-    }
-    manipuriNumber = "".join(mapping[char] if char in mapping else char for char in europeanNumber)
-    return manipuriNumber
+# def europeanToManipuri(europeanNumber):
+#     mapping = {
+#         '0': '꯰', '1': '꯱', '2': '꯲', '3': '꯳', '4': '꯴',
+#         '5': '꯵', '6': '꯶', '7': '꯷', '8': '꯸', '9': '꯹'
+#     }
+#     manipuriNumber = "".join(mapping[char] if char in mapping else char for char in europeanNumber)
+#     return manipuriNumber
 
 def europeanToNepali(europeanNumber):
     mapping = {
@@ -120,12 +120,12 @@ def main():
     compare_kannada = st.sidebar.checkbox("Kannada")
     compare_malayalam = st.sidebar.checkbox("Malayalam")
     compare_sinhala = st.sidebar.checkbox("Sinhala")
-    compare_manipuri = st.sidebar.checkbox("Manipuri")
+    # compare_manipuri = st.sidebar.checkbox("Manipuri")
     compare_nepali = st.sidebar.checkbox("Nepali")
     compare_assamese = st.sidebar.checkbox("Assamese")
 
     # Display all languages numbers if no comparison is selected
-    if not (compare_telugu or compare_devanagari or compare_gurmukhi or compare_bengali or compare_gujarati or compare_oriya or compare_tamil or compare_kannada or compare_malayalam or compare_sinhala or compare_manipuri or compare_nepali or compare_assamese):
+    if not (compare_telugu or compare_devanagari or compare_gurmukhi or compare_bengali or compare_gujarati or compare_oriya or compare_tamil or compare_kannada or compare_malayalam or compare_sinhala or compare_nepali or compare_assamese):
         st.markdown("### Converted Numbers")
         st.write("Telugu:", europeanToTelugu(european_number))
         st.write("Devanagari:", europeanToDevanagari(european_number))
@@ -137,7 +137,7 @@ def main():
         st.write("Kannada:", europeanToKannada(european_number))
         st.write("Malayalam:", europeanToMalayalam(european_number))
         st.write("Sinhala:", europeanToSinhala(european_number))
-        st.write("Manipuri:", europeanToManipuri(european_number))
+        # st.write("Manipuri:", europeanToManipuri(european_number))
         st.write("Nepali:", europeanToNepali(european_number))
         st.write("Assamese:", europeanToAssamese(european_number))
     else:
@@ -164,8 +164,8 @@ def main():
             comparisons.append(("Malayalam", europeanToMalayalam(european_number)))
         if compare_sinhala:
             comparisons.append(("Sinhala", europeanToSinhala(european_number)))
-        if compare_manipuri:
-            comparisons.append(("Manipuri", europeanToManipuri(european_number)))
+        # if compare_manipuri:
+        #     comparisons.append(("Manipuri", europeanToManipuri(european_number)))
         if compare_nepali:
             comparisons.append(("Nepali", europeanToNepali(european_number)))
         if compare_assamese:
