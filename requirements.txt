@@ -1,3 +1,2 @@
-streamlit==1.10.0
-chardet==4.0.0
+streamlit==1.36.0
 
