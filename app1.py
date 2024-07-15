@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Conversion functions from European numerals to various Indian scripts
+# Conversion functions from European numerals to various Indian and other scripts
 
 def europeanToTelugu(europeanNumber):
     mapping = {
@@ -9,8 +9,6 @@ def europeanToTelugu(europeanNumber):
     }
     teluguNumber = "".join(mapping[char] if char in mapping else char for char in europeanNumber)
     return teluguNumber
-
-# Add other conversion functions similarly for Devanagari, Gurmukhi, Bengali, Gujarati, Oriya, Tamil, Kannada, Malayalam, Sinhala, Manipuri, Nepali, Assamese
 
 def europeanToDevanagari(europeanNumber):
     mapping = {
