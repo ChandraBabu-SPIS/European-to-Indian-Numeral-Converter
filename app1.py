@@ -120,7 +120,7 @@ def main():
     compare_kannada = st.sidebar.checkbox("Kannada")
     compare_malayalam = st.sidebar.checkbox("Malayalam")
     compare_sinhala = st.sidebar.checkbox("Sinhala")
-    #compare_manipuri = st.sidebar.checkbox("Manipuri")
+    compare_manipuri = st.sidebar.checkbox("Manipuri")
     compare_nepali = st.sidebar.checkbox("Nepali")
     compare_assamese = st.sidebar.checkbox("Assamese")
 
@@ -137,7 +137,7 @@ def main():
         st.write("Kannada:", europeanToKannada(european_number))
         st.write("Malayalam:", europeanToMalayalam(european_number))
         st.write("Sinhala:", europeanToSinhala(european_number))
-        #st.write("Manipuri:", europeanToManipuri(european_number))
+        st.write("Manipuri:", europeanToManipuri(european_number))
         st.write("Nepali:", europeanToNepali(european_number))
         st.write("Assamese:", europeanToAssamese(european_number))
     else:
@@ -164,8 +164,8 @@ def main():
             comparisons.append(("Malayalam", europeanToMalayalam(european_number)))
         if compare_sinhala:
             comparisons.append(("Sinhala", europeanToSinhala(european_number)))
-        #if compare_manipuri:
-           # comparisons.append(("Manipuri", europeanToManipuri(european_number)))
+        if compare_manipuri:
+            comparisons.append(("Manipuri", europeanToManipuri(european_number)))
         if compare_nepali:
             comparisons.append(("Nepali", europeanToNepali(european_number)))
         if compare_assamese:
